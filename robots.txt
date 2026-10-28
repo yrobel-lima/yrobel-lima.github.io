@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yrobel-lima.github.io/sitemap.xml
