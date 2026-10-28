@@ -3,70 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Report reminders | Yrobel Lima</title>
+  <title>Report deadline reminders | Yrobel Lima</title>
   <meta name="description" content="Personal deadline reminders for every clinician, sent automatically.">
   <link rel="canonical" href="https://yrobel-lima.github.io/work/reminders.html">
-  <meta property="og:title" content="Report reminders | Yrobel Lima">
+  <meta property="og:title" content="Report deadline reminders | Yrobel Lima">
   <meta property="og:description" content="Personal deadline reminders for every clinician, sent automatically.">
   <meta property="og:url" content="https://yrobel-lima.github.io/work/reminders.html">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/hex-filled.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&amp;display=optional">
   <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/icons.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <div class="shell">
-  <header>
-    <div class="top">
-      <a class="brand" href="../index.html"><span class="hex hex--logo" aria-hidden="true"></span>Yrobel Lima</a>
-      <a class="icon-link" href="https://github.com/yrobel-lima" aria-label="GitHub profile"><span class="icon i-github" aria-hidden="true"></span></a>
+    <header>
+      <div class="top">
+        <a class="brand" href="../index.html">Yrobel Lima</a>
+        <nav class="tabs" aria-label="Sections">
+          <a href="../about.html">About</a>
+          <a href="../services/generative-ai.html">Services</a>
+          <a href="../work/toolkit.html" aria-current="page">Work</a>
+          <a href="../research/thorium.html">Research</a>
+          <a href="../stack.html">Stack</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <nav aria-label="Work pages">
+          <p class="nav-group">AI</p>
+          <ol class="nav">
+            <li><a href="../work/toolkit.html">Clinical toolkit</a></li>
+            <li><a href="../work/website-assistant.html">Website assistant</a></li>
+            <li><a href="../work/case-assistant.html">Case and referral assistant</a></li>
+            <li><a href="../work/staff-assistant.html">Staff knowledge assistant</a></li>
+            <li><a href="../work/mcp.html">MCP server</a></li>
+          </ol>
+          <p class="nav-group">Automation</p>
+          <ol class="nav">
+            <li><a href="../work/reminders.html" aria-current="page">Report deadline reminders</a></li>
+            <li><a href="../work/referrals.html">Referral intake</a></li>
+            <li><a href="../work/registry.html">Patient registry</a></li>
+            <li><a href="../work/admin.html">Admin apps</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <main id="content" class="content">
+        <h1>Report deadline reminders</h1>
+        <p>Personal deadline reminders for every clinician, sent automatically.</p>
+        <p>Clinicians have reports due on different dates. Every week someone on the admin team went through an Excel export and reminded each clinician of their own deadlines. It took about two hours.</p>
+        <p>A Power Automate flow, working with Microsoft Forms, now reads the export, works out each clinician's due dates and emails everyone a personal reminder. It runs in under a minute. The admin side of it takes two minutes a week.</p>
+        <ul class="tags" aria-label="Built with">
+          <li><img class="icon" src="../assets/hex.svg" alt="">Power Automate</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">Microsoft Forms</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">Excel</li>
+        </ul>
+        <nav class="pager" aria-label="Keep reading"><a href="../work/mcp.html"><small>Previous</small><b>MCP server</b></a><a class="next" href="../work/referrals.html"><small>Next</small><b>Referral intake</b></a></nav>
+      </main>
     </div>
-    <nav class="tabs" aria-label="Sections">
-      <a href="../about.html">About</a>
-      <a href="../services/generative-ai.html">Services</a>
-      <a href="../work/toolkit.html" aria-current="page">Work</a>
-      <a href="../research/allegro.html">Research</a>
-      <a href="../stack.html">Stack</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </header>
-  <div class="layout">
-  <aside class="sidebar">
-    <nav aria-label="Work pages">
-      <p class="nav-group">AI</p>
-      <ol class="nav">
-        <li><a href="../work/toolkit.html"><span class="hex"><span>1</span></span>Clinical toolkit</a></li>
-        <li><a href="../work/website-assistant.html"><span class="hex"><span>2</span></span>Website assistant</a></li>
-        <li><a href="../work/case-assistant.html"><span class="hex"><span>3</span></span>Case and referral assistant</a></li>
-        <li><a href="../work/staff-assistant.html"><span class="hex"><span>4</span></span>Staff policy assistant</a></li>
-        <li><a href="../work/mcp.html"><span class="hex"><span>5</span></span>MCP server</a></li>
-      </ol>
-      <p class="nav-group">Automation</p>
-      <ol class="nav">
-        <li><a href="../work/reminders.html" aria-current="page"><span class="hex"><span>6</span></span>Report reminders</a></li>
-        <li><a href="../work/referrals.html"><span class="hex"><span>7</span></span>Referral intake</a></li>
-        <li><a href="../work/registry.html"><span class="hex"><span>8</span></span>Patient registry</a></li>
-        <li><a href="../work/admin.html"><span class="hex"><span>9</span></span>Admin apps</a></li>
-      </ol>
-    </nav>
-    <div class="sidebar-extra">
-      <p>Work with me</p>
-      <a href="../contact.html">Contact</a>
-    </div>
-  </aside>
-  <main id="content" class="content">
-    <h1>Report reminders</h1>
-<p class="lead">Personal deadline reminders for every clinician, sent automatically.</p>
-<p>Clinicians have reports due on different dates. Every week someone on the admin team went through an Excel export and reminded each clinician of their own deadlines. It took about two hours.</p>
-<p>A Power Automate flow, working with Microsoft Forms, now reads the export, works out each clinician's due dates and emails everyone a personal reminder. It runs in under a minute. The admin side of it takes two minutes a week.</p>
-<ul class="tags" aria-label="Built with"><li><span class="icon i-power-automate" aria-hidden="true"></span>Power Automate</li><li><span class="icon i-microsoft-forms" aria-hidden="true"></span>Microsoft Forms</li><li><span class="icon i-excel" aria-hidden="true"></span>Excel</li></ul>
-    <nav class="pager" aria-label="Keep reading"><a href="../work/mcp.html"><small>Previous</small><b>MCP server</b></a><a class="next" href="../work/referrals.html"><small>Next</small><b>Referral intake</b></a></nav>
-  </main>
-  </div>
-  <footer class="site-footer">© 2026 Yrobel Lima</footer>
+    <footer class="site-footer">
+      <a href="mailto:yrobellima@gmail.com"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/envelope.svg" alt="" width="16" height="16">yrobellima@gmail.com</a>
+      <a href="https://www.linkedin.com/in/yrobel-lima-reinaldo"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/linkedin.svg" alt="" width="16" height="16">LinkedIn</a>
+      <a href="https://github.com/yrobel-lima"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/github.svg" alt="" width="16" height="16">GitHub</a>
+    </footer>
   </div>
 </body>
 </html>

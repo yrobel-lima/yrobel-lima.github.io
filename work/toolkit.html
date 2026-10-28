@@ -9,70 +9,81 @@
   <meta property="og:title" content="Clinical toolkit | Yrobel Lima">
   <meta property="og:description" content="One web app with four AI tools for clinicians and staff, written entirely in Python.">
   <meta property="og:url" content="https://yrobel-lima.github.io/work/toolkit.html">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/hex-filled.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&amp;display=optional">
   <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/icons.css">
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
   <div class="shell">
-  <header>
-    <div class="top">
-      <a class="brand" href="../index.html"><span class="hex hex--logo" aria-hidden="true"></span>Yrobel Lima</a>
-      <a class="icon-link" href="https://github.com/yrobel-lima" aria-label="GitHub profile"><span class="icon i-github" aria-hidden="true"></span></a>
+    <header>
+      <div class="top">
+        <a class="brand" href="../index.html">Yrobel Lima</a>
+        <nav class="tabs" aria-label="Sections">
+          <a href="../about.html">About</a>
+          <a href="../services/generative-ai.html">Services</a>
+          <a href="../work/toolkit.html" aria-current="page">Work</a>
+          <a href="../research/thorium.html">Research</a>
+          <a href="../stack.html">Stack</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <nav aria-label="Work pages">
+          <p class="nav-group">AI</p>
+          <ol class="nav">
+            <li><a href="../work/toolkit.html" aria-current="page">Clinical toolkit</a></li>
+            <li><a href="../work/website-assistant.html">Website assistant</a></li>
+            <li><a href="../work/case-assistant.html">Case and referral assistant</a></li>
+            <li><a href="../work/staff-assistant.html">Staff knowledge assistant</a></li>
+            <li><a href="../work/mcp.html">MCP server</a></li>
+          </ol>
+          <p class="nav-group">Automation</p>
+          <ol class="nav">
+            <li><a href="../work/reminders.html">Report deadline reminders</a></li>
+            <li><a href="../work/referrals.html">Referral intake</a></li>
+            <li><a href="../work/registry.html">Patient registry</a></li>
+            <li><a href="../work/admin.html">Admin apps</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <main id="content" class="content">
+        <h1>Clinical toolkit</h1>
+        <p>One web app with four AI tools for clinicians and staff, written entirely in Python.</p>
+        <ul>
+          <li>Session transcripts into completed WorkSafeBC report forms as PDFs. This cut clinicians' after-hours documentation by more than half.</li>
+          <li>Session transcripts scored against a rubric, with the results saved to Dataverse.</li>
+          <li>Clinical reports reviewed against a checklist, with the review saved to SharePoint and sent by email.</li>
+          <li>Research papers summarized, tagged and posted to the right Slack channel.</li>
+        </ul>
+        <p>Every tool follows the same pattern. The user uploads a file or fills in a form, Azure OpenAI drafts the output, and Pydantic validates it against a schema. The user reviews and edits the draft before submitting it, and every action is logged without patient content.</p>
+        <p>The app is one NiceGUI process on FastAPI, so there is no separate frontend. It stores data in Dataverse and SharePoint, sends email through Microsoft Graph, fills PDF forms with PyMuPDF and builds reports from Word templates with docxtpl. PDF generation runs in a worker thread so it never blocks the event loop. Staff sign in with Microsoft Entra ID, and the app ships as a Docker image to Azure App Service.</p>
+        <ul class="tags" aria-label="Built with">
+          <li><img class="icon" src="../assets/icons/python.svg" alt="">Python</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">NiceGUI</li>
+          <li><img class="icon" src="../assets/icons/fastapi.svg" alt="">FastAPI</li>
+          <li><img class="icon" src="../assets/icons/pydantic.svg" alt="">Pydantic</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">Azure OpenAI</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">Dataverse</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">SharePoint</li>
+          <li><img class="icon" src="../assets/icons/slack.svg" alt="">Slack</li>
+          <li><img class="icon" src="../assets/hex.svg" alt="">Microsoft Graph</li>
+          <li><img class="icon" src="../assets/icons/docker.svg" alt="">Docker</li>
+          <li><img class="icon" src="../assets/icons/uv.svg" alt="">uv</li>
+          <li><img class="icon" src="../assets/icons/ruff.svg" alt="">Ruff</li>
+        </ul>
+        <nav class="pager" aria-label="Keep reading"><a href="../services/power-platform.html"><small>Previous</small><b>Power Platform</b></a><a class="next" href="../work/website-assistant.html"><small>Next</small><b>Website assistant</b></a></nav>
+      </main>
     </div>
-    <nav class="tabs" aria-label="Sections">
-      <a href="../about.html">About</a>
-      <a href="../services/generative-ai.html">Services</a>
-      <a href="../work/toolkit.html" aria-current="page">Work</a>
-      <a href="../research/allegro.html">Research</a>
-      <a href="../stack.html">Stack</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
-  </header>
-  <div class="layout">
-  <aside class="sidebar">
-    <nav aria-label="Work pages">
-      <p class="nav-group">AI</p>
-      <ol class="nav">
-        <li><a href="../work/toolkit.html" aria-current="page"><span class="hex"><span>1</span></span>Clinical toolkit</a></li>
-        <li><a href="../work/website-assistant.html"><span class="hex"><span>2</span></span>Website assistant</a></li>
-        <li><a href="../work/case-assistant.html"><span class="hex"><span>3</span></span>Case and referral assistant</a></li>
-        <li><a href="../work/staff-assistant.html"><span class="hex"><span>4</span></span>Staff policy assistant</a></li>
-        <li><a href="../work/mcp.html"><span class="hex"><span>5</span></span>MCP server</a></li>
-      </ol>
-      <p class="nav-group">Automation</p>
-      <ol class="nav">
-        <li><a href="../work/reminders.html"><span class="hex"><span>6</span></span>Report reminders</a></li>
-        <li><a href="../work/referrals.html"><span class="hex"><span>7</span></span>Referral intake</a></li>
-        <li><a href="../work/registry.html"><span class="hex"><span>8</span></span>Patient registry</a></li>
-        <li><a href="../work/admin.html"><span class="hex"><span>9</span></span>Admin apps</a></li>
-      </ol>
-    </nav>
-    <div class="sidebar-extra">
-      <p>Work with me</p>
-      <a href="../contact.html">Contact</a>
-    </div>
-  </aside>
-  <main id="content" class="content">
-    <h1>Clinical toolkit</h1>
-<p class="lead">One web app with four AI tools for clinicians and staff, written entirely in Python.</p>
-<ul>
-<li>Session transcripts into completed WorkSafeBC report forms as PDFs. This cut clinicians' after-hours documentation by more than half.</li>
-<li>Session transcripts scored against a rubric, with the results saved to Dataverse.</li>
-<li>Clinical reports reviewed against a checklist, with the review saved to SharePoint and sent by email.</li>
-<li>Research papers summarized, tagged and posted to the right Slack channel.</li>
-</ul>
-<p>Every tool follows the same pattern. The user uploads a file or fills in a form, Azure OpenAI drafts the output, and Pydantic validates it against a schema. The user reviews and edits the draft before submitting it, and every action is logged without patient content.</p>
-<p>The app is one NiceGUI process on FastAPI, so there is no separate frontend. It stores data in Dataverse and SharePoint, sends email through Microsoft Graph, fills PDF forms with PyMuPDF and builds reports from Word templates with docxtpl. PDF generation runs in a worker thread so it never blocks the event loop. Staff sign in with Microsoft Entra ID, and the app ships as a Docker image to Azure App Service.</p>
-<ul class="tags" aria-label="Built with"><li><span class="icon i-python" aria-hidden="true"></span>Python</li><li><span class="icon i-nicegui" aria-hidden="true"></span>NiceGUI</li><li><span class="icon i-fastapi" aria-hidden="true"></span>FastAPI</li><li><span class="icon i-pydantic" aria-hidden="true"></span>Pydantic</li><li><span class="icon i-azure-openai" aria-hidden="true"></span>Azure OpenAI</li><li><span class="icon i-dataverse" aria-hidden="true"></span>Dataverse</li><li><span class="icon i-sharepoint" aria-hidden="true"></span>SharePoint</li><li><span class="icon i-slack" aria-hidden="true"></span>Slack</li><li><span class="icon i-microsoft-graph" aria-hidden="true"></span>Microsoft Graph</li><li><span class="icon i-docker" aria-hidden="true"></span>Docker</li><li><span class="icon i-uv" aria-hidden="true"></span>uv</li><li><span class="icon i-ruff" aria-hidden="true"></span>Ruff</li></ul>
-    <nav class="pager" aria-label="Keep reading"><a href="../services/power-platform.html"><small>Previous</small><b>Power Platform</b></a><a class="next" href="../work/website-assistant.html"><small>Next</small><b>Website assistant</b></a></nav>
-  </main>
-  </div>
-  <footer class="site-footer">© 2026 Yrobel Lima</footer>
+    <footer class="site-footer">
+      <a href="mailto:yrobellima@gmail.com"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/envelope.svg" alt="" width="16" height="16">yrobellima@gmail.com</a>
+      <a href="https://www.linkedin.com/in/yrobel-lima-reinaldo"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/linkedin.svg" alt="" width="16" height="16">LinkedIn</a>
+      <a href="https://github.com/yrobel-lima"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/icons/github.svg" alt="" width="16" height="16">GitHub</a>
+    </footer>
   </div>
 </body>
 </html>
