@@ -49,7 +49,14 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  font: 17px/1.6 "Literata", Georgia, serif;
+  font: 16px/1.6 "Inter", system-ui, sans-serif;
+}
+
+h1,
+h3,
+b,
+strong {
+  font-weight: 600;
 }
 
 a {
@@ -153,7 +160,7 @@ header {
 .brand {
   color: var(--text);
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -223,7 +230,7 @@ header {
 }
 
 .nav a[aria-current="page"] {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 
@@ -424,10 +431,6 @@ header {
 /* Small screens */
 
 @media (max-width: 760px) {
-  body {
-    font-size: 16px;
-  }
-
   h1 {
     font-size: 28px;
   }
