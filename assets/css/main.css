@@ -249,12 +249,6 @@ header {
   white-space: nowrap;
 }
 
-.icon {
-  flex: none;
-  width: 18px;
-  height: 18px;
-}
-
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -266,17 +260,9 @@ header {
 }
 
 .tags li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   margin: 0;
   color: var(--muted);
   font-size: 14px;
-}
-
-.tags .icon {
-  width: 14px;
-  height: 14px;
 }
 
 .links a {
@@ -416,9 +402,6 @@ header {
 }
 
 .stack-grid li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   break-inside: avoid;
 }
 

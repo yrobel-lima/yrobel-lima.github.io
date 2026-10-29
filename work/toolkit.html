@@ -63,18 +63,18 @@
         <p>Every tool follows the same pattern. The user uploads a file or fills in a form, Azure OpenAI drafts the output, and Pydantic validates it against a schema. The user reviews and edits the draft before submitting it, and every action is logged without patient content.</p>
         <p>The app is one NiceGUI process on FastAPI, so there is no separate frontend. It stores data in Dataverse and SharePoint, sends email through Microsoft Graph, fills PDF forms with PyMuPDF and builds reports from Word templates with docxtpl. PDF generation runs in a worker thread so it never blocks the event loop. Staff sign in with Microsoft Entra ID, and the app ships as a Docker image to Azure App Service.</p>
         <ul class="tags" aria-label="Built with">
-          <li><img class="icon" src="../assets/icons/python.svg" alt="">Python</li>
-          <li><img class="icon" src="../assets/hex.svg" alt="">NiceGUI</li>
-          <li><img class="icon" src="../assets/icons/fastapi.svg" alt="">FastAPI</li>
-          <li><img class="icon" src="../assets/icons/pydantic.svg" alt="">Pydantic</li>
-          <li><img class="icon" src="../assets/hex.svg" alt="">Azure OpenAI</li>
-          <li><img class="icon" src="../assets/hex.svg" alt="">Dataverse</li>
-          <li><img class="icon" src="../assets/hex.svg" alt="">SharePoint</li>
-          <li><img class="icon" src="../assets/icons/slack.svg" alt="">Slack</li>
-          <li><img class="icon" src="../assets/hex.svg" alt="">Microsoft Graph</li>
-          <li><img class="icon" src="../assets/icons/docker.svg" alt="">Docker</li>
-          <li><img class="icon" src="../assets/icons/uv.svg" alt="">uv</li>
-          <li><img class="icon" src="../assets/icons/ruff.svg" alt="">Ruff</li>
+          <li>Python</li>
+          <li>NiceGUI</li>
+          <li>FastAPI</li>
+          <li>Pydantic</li>
+          <li>Azure OpenAI</li>
+          <li>Dataverse</li>
+          <li>SharePoint</li>
+          <li>Slack</li>
+          <li>Microsoft Graph</li>
+          <li>Docker</li>
+          <li>uv</li>
+          <li>Ruff</li>
         </ul>
         <nav class="pager" aria-label="Keep reading"><a href="../services/power-platform.html"><small>Previous</small><b>Power Platform</b></a><a class="next" href="../work/website-assistant.html"><small>Next</small><b>Website assistant</b></a></nav>
       </main>
