@@ -26,10 +26,6 @@ header {
   view-transition-name: sidebar;
 }
 
-.site-footer {
-  view-transition-name: footer;
-}
-
 @media (prefers-reduced-motion: reduce) {
   @view-transition {
     navigation: none;
@@ -116,16 +112,12 @@ li {
 /* Layout */
 
 .shell {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
   max-width: 1040px;
   margin: 0 auto;
   padding: 0 32px;
 }
 
 .layout {
-  flex: 1;
   display: grid;
   grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
   gap: var(--column-gap);
@@ -142,31 +134,6 @@ li {
 .content {
   max-width: 660px;
   padding: 40px 0 56px;
-}
-
-.site-footer {
-  position: sticky;
-  bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 28px;
-  padding: 14px 0;
-  border-top: 1px solid var(--rule);
-  background: var(--bg);
-  font-size: 14px;
-}
-
-.site-footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  color: var(--accent);
-  text-decoration: underline;
 }
 
 
