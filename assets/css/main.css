@@ -26,6 +26,10 @@ header {
   view-transition-name: sidebar;
 }
 
+.site-footer {
+  view-transition-name: footer;
+}
+
 @media (prefers-reduced-motion: reduce) {
   @view-transition {
     navigation: none;
@@ -141,11 +145,14 @@ li {
 }
 
 .site-footer {
+  position: sticky;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 28px;
-  padding: 20px 0 28px;
+  padding: 14px 0;
   border-top: 1px solid var(--rule);
+  background: var(--bg);
   font-size: 14px;
 }
 
